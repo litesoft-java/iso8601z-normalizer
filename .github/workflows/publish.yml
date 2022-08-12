@@ -10,6 +10,9 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
@@ -42,3 +45,7 @@ jobs:
           overwrite: true
           file_glob: true
           body: "${{ github.event.head_commit.message }}"
+      - name: Publish package
+        run: ./mvnw -X -ntp -DskipTests --batch-mode deploy -Dusername=$GITHUB_TOKEN
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
