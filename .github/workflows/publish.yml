@@ -36,6 +36,8 @@ jobs:
         run: ls -al target
       - name: Populate Artifacts
         run: ./copyArtifacts.sh
+      - name: Dump Artifacts
+        run: ls -al artifacts
       - name: Upload JAR to release
         uses: svenstaro/upload-release-action@v2
         with:
