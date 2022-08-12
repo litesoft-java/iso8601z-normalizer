@@ -47,3 +47,7 @@ jobs:
           overwrite: true
           body: "${{ github.event.head_commit.message }}"
           file_glob: true
+      - name: Publish package
+        run: ./mvnw -X -ntp -DskipTests --batch-mode deploy -Dusername=$GITHUB_TOKEN
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
