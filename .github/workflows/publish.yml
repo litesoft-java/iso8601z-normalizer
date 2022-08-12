@@ -8,7 +8,7 @@ on:
         required: true
         type: string
 jobs:
-  release:
+  publish:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -38,7 +38,7 @@ jobs:
         run: ./copyArtifacts.sh
       - name: Dump Artifacts
         run: ls -al artifacts
-      - name: Upload JAR to release
+      - name: Upload JAR and pom to release
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
