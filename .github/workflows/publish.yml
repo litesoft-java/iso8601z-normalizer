@@ -42,9 +42,8 @@ jobs:
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: pom.xml
-#          file: artifacts/*
+          file: artifacts/*
           tag: "v${{ env.pom_projectVersion }}"
           overwrite: true
           body: "${{ github.event.head_commit.message }}"
-#          file_glob: true
+          file_glob: true
