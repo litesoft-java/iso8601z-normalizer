@@ -6,7 +6,7 @@
 
     <groupId>org.litesoft</groupId>
     <artifactId>iso8601z-normalizer</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <packaging>jar</packaging>
 
     <name>iso8601z-normalizer</name>
@@ -14,7 +14,6 @@
     <description>Utility classes to take an ISO-8601 like timestamp and make an ISO-8601 conforming version</description>
 
 	<url>https://github.com/litesoft-java/iso8601z-normalizer</url>
-
 	<licenses>
 		<license>
 			<name>The Unlicense</name>
