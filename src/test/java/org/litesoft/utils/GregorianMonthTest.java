@@ -105,7 +105,7 @@ class GregorianMonthTest {
         assertEquals( nameEnglish, month.getNameEnglish(), msg );
         assertEquals( monthNumber, month.getMonthNumber(), msg );
 
-        if (month != FEB) {
+        if ( month != FEB ) {
             assertEquals( month.getNominalDaysInMonth(), month.getDaysInMonth( 1900 ), msg );
             assertEquals( month.getNominalDaysInMonth(), month.getDaysInMonth( 2000 ), msg );
         }
@@ -115,7 +115,7 @@ class GregorianMonthTest {
         assertEquals( month, GregorianMonth.fromThreeLetterCode( camel3Abbrev ) );
         assertEquals( month, GregorianMonth.fromThreeLetterCode( upper3Abbrev.toLowerCase() ) );
         assertEquals( month, GregorianMonth.fromTwoLetterCode( twoLetterAbbrev ) );
-        assertEquals( month, GregorianMonth.fromTwoLetterCode( twoLetterAbbrev .toLowerCase()) );
+        assertEquals( month, GregorianMonth.fromTwoLetterCode( twoLetterAbbrev.toLowerCase() ) );
         assertEquals( month, GregorianMonth.fromNameEnglish( nameEnglish ) );
         assertEquals( month, GregorianMonth.fromNameEnglish( nameEnglish.toUpperCase() ) );
         assertEquals( month, GregorianMonth.fromNameEnglish( nameEnglish.toLowerCase() ) );
