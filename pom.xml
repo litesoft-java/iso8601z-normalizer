@@ -6,7 +6,7 @@
 
     <groupId>org.litesoft</groupId>
     <artifactId>iso8601z-normalizer</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <packaging>jar</packaging>
 
     <name>iso8601z-normalizer</name>
